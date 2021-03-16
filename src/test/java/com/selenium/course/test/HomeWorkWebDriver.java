@@ -19,18 +19,16 @@ public class HomeWorkWebDriver {
     private WebDriver driverFirefox;
 
     @BeforeTest
-
     public void openBrowser(){
-        WebDriverManager.chromedriver();
+        WebDriverManager.chromedriver().setup();
         driverChrome = new ChromeDriver();
 
-        WebDriverManager.firefoxdriver();
+        WebDriverManager.firefoxdriver().setup();
         driverFirefox = new FirefoxDriver();
 
     }
 
     @Test
-
     public void executeTestChrome(){
         driverChrome.get("https://www.saucedemo.com/");
 
@@ -77,7 +75,6 @@ public class HomeWorkWebDriver {
     }
 
     @AfterTest
-
     public void tearDown(){
         driverChrome.quit();
         driverFirefox.quit();
