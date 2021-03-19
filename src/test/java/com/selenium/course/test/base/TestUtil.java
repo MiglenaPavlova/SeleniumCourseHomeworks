@@ -15,7 +15,7 @@ public class TestUtil {
     public   WebDriver driver;
     private String url;
     private int implicitWait;
-    public String browser;
+    private String browser;
 
     @BeforeSuite
     public void readConfigProperties(){
